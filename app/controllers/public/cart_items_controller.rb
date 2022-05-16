@@ -1,6 +1,7 @@
 class Public::CartItemsController < ApplicationController
 
   def index
+    @cart_item = CartItem.new
   end
 
   def update
