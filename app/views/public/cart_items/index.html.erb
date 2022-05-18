@@ -4,9 +4,9 @@
     class: "btn btn-danger", data: { confirm: "カートの中身を全て削除しますか？" } %>
 
   <table border="1" style="border-collapse: collapse">
-    <thead class ="table-active">
+    <thead class ="table-active center">
       <tr>
-        <th width = "200">商品名</th>
+        <th width = "200" height = "50">商品名</th>
         <th width = "150">単価(税込)</th>
         <th width = "100">数量</th>
         <th width = "100">小計</th>
@@ -16,7 +16,7 @@
     <% @cart_items.each do |cart_item| %>
     <tbody>
       <tr>
-        <td>
+        <td height = "50">
           <%= image_tag cart_item.item.image, size: "100×100" %>
           <%= cart_item.item.name %>
         </td>
