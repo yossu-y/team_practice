@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     sessions: 'public/sessions'
   }
 
+  scope module: :public do
+    resources :orders, only: [:new]
+  end
+
 
   # 管理者のルーティング
 
