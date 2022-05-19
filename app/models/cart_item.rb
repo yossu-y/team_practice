@@ -3,11 +3,11 @@ class CartItem < ApplicationRecord
   belongs_to :customer
   belongs_to :item
 
-  validates :item_id, :count, presence: true
-  validates :count, numericality:{ only_integer: true }
+  validates :customer_id, :item_id, :total_count,  presence: true
+  validates :total_count, numericality: { only_integer: true }
 
-  def sum_of_price
-    item.taxin_price * count
+  def subtotal
+    item.tax_included_price * total_count
   end
 
 end
