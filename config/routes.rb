@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :public do
+    get 'items/index'
+    get 'items/show'
+  end
   # 顧客用
 
   devise_for :customers,skip: [:passwords], controllers: {
